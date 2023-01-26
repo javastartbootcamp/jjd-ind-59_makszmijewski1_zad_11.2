@@ -7,18 +7,9 @@ public class Person {
     private String pesel;
 
     public Person(String firstName, String lastName, int age, String pesel) {
-        if (checkName(firstName)) {
-            throw new NameUndefinedException("Nieprawidłowe imię");
-        }
-        if (checkName(lastName)) {
-            throw new NameUndefinedException("Nieprawidłowe naziwsko");
-        }
-        if (checkAge(age)) {
-            throw new IncorrectAgeException("Nieprawidłowy wiek");
-        }
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setAge(age);
         this.pesel = pesel;
     }
 
